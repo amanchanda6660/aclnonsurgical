@@ -27,25 +27,25 @@ export default function Footer() {
                     <div className="footer-links-group">
                         <h4>Navigate</h4>
                         <ul>
-                            <li><a href="#about">About ACL Injuries</a></li>
-                            <li><a href="#protocol">The Protocol</a></li>
-                            <li><a href="#team">Treatment Team</a></li>
-                            <li><a href="#evidence">Research &amp; Evidence</a></li>
-                            <li><a href="#stories">Patient Stories</a></li>
+                            <li><a href="/about">About ACL Injuries</a></li>
+                            <li><a href="/protocol">The Protocol</a></li>
+                            <li><a href="/team">Treatment Team</a></li>
+                            <li><a href="/evidence">Research &amp; Evidence</a></li>
+                            <li><a href="/stories">Patient Stories</a></li>
                         </ul>
                     </div>
                     <div className="footer-links-group">
                         <h4>For Clinicians</h4>
                         <ul>
-                            <li><a href="#contact">Join Our Network</a></li>
-                            <li><a href="#evidence">Clinical Resources</a></li>
-                            <li><a href="#protocol">Protocol Guidelines</a></li>
-                            <li><a href="#contact">Refer a Patient</a></li>
+                            <li><a href="/contact">Join Our Network</a></li>
+                            <li><a href="/evidence">Clinical Resources</a></li>
+                            <li><a href="/protocol">Protocol Guidelines</a></li>
+                            <li><a href="/contact">Refer a Patient</a></li>
                         </ul>
                     </div>
                 </div>
                 <div className="footer-bottom">
-                    <p>&copy; 2024 ACL Non-Surgical. All rights reserved.</p>
+                    <p>&copy; 2026 ACL Non-Surgical. All rights reserved.</p>
                     <div className="footer-bottom-links">
                         <a href="#">Privacy Policy</a>
                         <a href="#">Terms of Use</a>

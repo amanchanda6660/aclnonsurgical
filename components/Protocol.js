@@ -35,9 +35,9 @@ export default function Protocol() {
         <section className="section protocol" id="protocol" ref={ref}>
             <div className="container">
                 <div className="section-header">
-                    <p className="section-eyebrow">The Healing Protocol</p>
+                    <p className="section-eyebrow">The Cross Bracing Protocol</p>
                     <h2 className="section-title">How Non-Surgical ACL Healing Works</h2>
-                    <p className="section-description">Research has shown that the ACL, like a broken bone, can heal if the torn ends are brought close together within a critical treatment window. Our protocol leverages the body&apos;s natural repair mechanisms.</p>
+                    <p className="section-description">Research has shown that the ACL can heal if the torn ends are brought close together within a critical treatment window. Our protocol leverages the body&apos;s natural repair mechanisms.</p>
                 </div>
 
                 <div className="protocol-timeline">

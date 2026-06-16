@@ -184,7 +184,7 @@ export default function TestimonialForm() {
 
                             <div className="video-link-section">
                                 <div className="video-link-header">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="18" height="18"><rect x="2" y="7" width="20" height="15" rx="2"/><path d="M16 3l-4 4-4-4"/><circle cx="12" cy="14" r="3" fill="currentColor" stroke="none" opacity=".3"/><path d="M11 13l2 1-2 1v-2z" fill="currentColor" stroke="none"/></svg>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="18" height="18"><rect x="2" y="7" width="20" height="15" rx="2"/><polygon points="10 12 16 15 10 18 10 12" fill="currentColor" stroke="none"/></svg>
                                     <span>Add a Video (optional)</span>
                                 </div>
                                 <p className="video-link-desc">Share a YouTube or Vimeo link of your recovery journey. A "Watch video" button will appear on your story card.</p>

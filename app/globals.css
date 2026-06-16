@@ -299,8 +299,27 @@ ul { list-style: none; }
     width: 100%;
 }
 
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 560px;
+    gap: 56px;
+    align-items: center;
+}
+
+.hero-left {
+    min-width: 0;
+}
+
+.hero-right {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    align-items: start;
+    opacity: 0;
+    animation: fadeUp 0.8s ease forwards 1.1s;
+}
+
 .hero-content {
-    max-width: 720px;
     margin-bottom: 60px;
 }
 
@@ -355,9 +374,80 @@ ul { list-style: none; }
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
-    max-width: 680px;
     opacity: 0;
     animation: fadeUp 0.8s ease forwards 1s;
+}
+
+/* Doctor photo card */
+.hero-doctor-card {
+    background: rgba(255, 255, 255, 0.82);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-xl);
+}
+
+.hero-doctor-img {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    background: linear-gradient(160deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-doctor-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+}
+
+.hero-doctor-img-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.hero-doctor-info {
+    padding: 20px 24px 22px;
+    border-top: 1px solid var(--color-border-light);
+}
+
+.hero-doctor-info strong {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--color-bg-dark);
+    margin-bottom: 5px;
+}
+
+.hero-doctor-info span {
+    font-size: 0.83rem;
+    color: var(--color-text-light);
+    line-height: 1.55;
+}
+
+.hero-doctor-email {
+    display: block;
+    margin-top: 6px;
+    font-size: 0.8rem;
+    color: var(--color-primary);
+    transition: var(--transition);
+}
+
+.hero-doctor-email:hover {
+    color: var(--color-primary-dark);
+    text-decoration: underline;
 }
 
 .stat-card {
@@ -698,6 +788,50 @@ ul { list-style: none; }
     border-color: var(--color-primary);
 }
 
+/* Dark alternating cards */
+.evidence-card:nth-child(even) {
+    background: var(--color-bg-dark);
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+.evidence-card:nth-child(even):hover {
+    border-color: var(--color-primary-light);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+.evidence-card:nth-child(even) h3 {
+    color: white;
+}
+
+.evidence-card:nth-child(even) p {
+    color: rgba(255, 255, 255, 0.72);
+}
+
+.evidence-card:nth-child(even) .evidence-type {
+    color: var(--color-primary-light);
+    background: rgba(42, 138, 158, 0.2);
+}
+
+.evidence-card:nth-child(even) .evidence-source {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.evidence-card:nth-child(even) .evidence-year {
+    color: var(--color-primary-light);
+}
+
+.evidence-card:nth-child(even) .evidence-citation {
+    color: rgba(255, 255, 255, 0.45);
+}
+
+.evidence-card:nth-child(even) .evidence-link {
+    color: var(--color-primary-light);
+}
+
+.evidence-card:nth-child(even) .evidence-link:hover {
+    color: white;
+}
+
 .evidence-type {
     font-size: 0.75rem;
     font-weight: 600;
@@ -747,6 +881,44 @@ ul { list-style: none; }
     font-size: 0.8rem;
     font-weight: 600;
     color: var(--color-primary);
+}
+
+.evidence-card-link {
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+}
+
+.evidence-card-link:hover {
+    border-color: var(--color-primary);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+.evidence-citation {
+    font-size: 0.78rem;
+    color: var(--color-text-light);
+    font-style: italic;
+    margin-top: -8px;
+    margin-bottom: 4px;
+}
+
+.evidence-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    transition: var(--transition);
+}
+
+.evidence-link:hover {
+    color: var(--color-primary-dark);
+    gap: 8px;
 }
 
 /* --- Stories Section --- */
@@ -973,6 +1145,19 @@ ul { list-style: none; }
     color: var(--color-primary);
     font-style: italic;
     display: block;
+}
+
+.story-email {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.78rem;
+    color: var(--color-primary);
+    transition: var(--transition);
+}
+
+.story-email:hover {
+    color: var(--color-primary-dark);
+    text-decoration: underline;
 }
 
 .story-video-link {
@@ -1737,6 +1922,14 @@ ul { list-style: none; }
     }
     .evidence-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+    .hero-grid {
+        grid-template-columns: 1fr;
+    }
+    .hero-right {
+        grid-template-columns: 1fr 1fr;
+        max-width: 560px;
+        margin: 0 auto;
     }
 }
 

@@ -40,27 +40,58 @@ export default function Hero() {
         <header className="hero" id="hero">
             <div className="hero-bg-pattern" />
             <div className="hero-container">
-                <div className="hero-content">
-                    <p className="hero-eyebrow">Evidence-Based ACL Recovery</p>
-                    <h1 className="hero-title">A Modern Non-Surgical Approach to <span className="text-gradient">ACL Healing</span></h1>
-                    <p className="hero-subtitle">Your anterior cruciate ligament has the potential to heal. Guided by the latest research, our protocol supports natural tissue repair &mdash; helping patients return to the activities they love, without surgery.</p>
-                    <div className="hero-actions">
-                        <a href="#protocol" className="btn btn-primary">Learn the Protocol</a>
-                        <a href="#stories" className="btn btn-outline">Patient Stories</a>
+                <div className="hero-grid">
+                    <div className="hero-left">
+                        <div className="hero-content">
+                            <p className="hero-eyebrow">Evidence-Based ACL Recovery</p>
+                            <h1 className="hero-title">A Modern Non-Surgical Approach to <span className="text-gradient">ACL Healing</span></h1>
+                            <p className="hero-subtitle">Your anterior cruciate ligament has the potential to heal. Guided by the latest research, the Cross Bracing Protocol supports natural tissue repair &mdash; helping patients return to the activities they love, without surgery.</p>
+                            <div className="hero-actions">
+                                <a href="#protocol" className="btn btn-primary">Learn the Protocol</a>
+                                <a href="#stories" className="btn btn-outline">Patient Stories</a>
+                            </div>
+                        </div>
+                        <div className="hero-stats">
+                            <div className="stat-card" data-animate="">
+                                <AnimatedCounter target={2100} />
+                                <span className="stat-label">Patients Treated</span>
+                            </div>
+                            <div className="stat-card" data-animate="">
+                                <AnimatedCounter target={40} />
+                                <span className="stat-label">Countries Worldwide</span>
+                            </div>
+                            <div className="stat-card" data-animate="">
+                                <AnimatedCounter target={85} isPercent />
+                                <span className="stat-label">Positive Healing Outcomes</span>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div className="hero-stats">
-                    <div className="stat-card" data-animate="">
-                        <AnimatedCounter target={2100} />
-                        <span className="stat-label">Patients Treated</span>
-                    </div>
-                    <div className="stat-card" data-animate="">
-                        <AnimatedCounter target={40} />
-                        <span className="stat-label">Countries Worldwide</span>
-                    </div>
-                    <div className="stat-card" data-animate="">
-                        <AnimatedCounter target={85} isPercent />
-                        <span className="stat-label">Positive Healing Outcomes</span>
+
+                    <div className="hero-right">
+                        <div className="hero-doctor-card">
+                            <div className="hero-doctor-img">
+                                <img src="https://www.rchsd.org/wp-content/uploads/2022/07/Suraj-Achar.jpg" alt="Dr. Suraj Achar" />
+                            </div>
+                            <div className="hero-doctor-info">
+                                <strong>Dr. Suraj Achar</strong>
+                                <span>Sports medicine specialist at Rady Children&rsquo;s Hospital, lead doctor for Cross Bracing Pediatrics USA</span>
+                                <a href="mailto:sachar.md@gmail.com" className="hero-doctor-email">sachar.md@gmail.com</a>
+                            </div>
+                        </div>
+                        <div className="hero-doctor-card">
+                            <div className="hero-doctor-img">
+                                <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" width="64" height="64" opacity="0.45">
+                                    <circle cx="40" cy="28" r="16" fill="white"/>
+                                    <path d="M8 72c0-17.673 14.327-32 32-32s32 14.327 32 32" fill="white"/>
+                                </svg>
+                                <span className="hero-doctor-img-label">Photo</span>
+                            </div>
+                            <div className="hero-doctor-info">
+                                <strong>Leisha Manchanda</strong>
+                                <span>Patient Advisor for Cross Bracing Pediatrics</span>
+                                <a href="mailto:leishaman@outlook.com" className="hero-doctor-email">leishaman@outlook.com</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -65,7 +65,7 @@ export default function Team() {
         <section className="section team" id="team" ref={ref}>
             <div className="container">
                 <div className="section-header">
-                    <p className="section-eyebrow">Your Treatment Team</p>
+                    <p className="section-eyebrow">Recovery Team</p>
                     <h2 className="section-title">The Specialists Behind Your Recovery</h2>
                     <p className="section-description">Successful non-surgical ACL management requires a coordinated, multidisciplinary team. Each member plays a distinct and vital role in your healing journey.</p>
                 </div>

@@ -3,7 +3,7 @@ import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 
 const stories = [
-    { initials: 'SM', color: '#1a5c6b', quote: 'I was told surgery was my only option. After finding this protocol and working with my physio team, my ACL healed on its own. I\'m back playing football 12 months later.', name: 'Sarah M.', detail: 'Amateur footballer, age 28', videoUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ' },
+    { initials: 'LM', color: '#1a5c6b', email: 'leishaman@outlook.com', quote: 'I tore my ACL, and chose a non-surgical pathway for the healing process. The process of Cross Bracing fully healed my high-grade ACL tear. For this procedure, I was braced up in a brace that set my right knee in a 90 degree angle for 3 weeks. After 3 weeks, the brace was gradually extended out through another 3 weeks, until I was finally allowed to bear weight on the leg. I was on crutches for a total of 6 weeks. Throughout the whole process, I was required to do PT (physical therapy) exercises, to ensure my left leg could gain more muscle to support all my body weight, but also to make sure my right leg could remain stable enough for my recovery. The first week was the hardest to adjust towards. Additionally, I was required to eat certain healthy foods, which helped with ligament growth, like bone broth and protein-rich foods. I got an MRI done around 2 months after my original injury, which showed my ACL had regrown! Unfortunately, about 5 months after the originally injury, my ACL had gotten another partial tear due to an accidental slip in the grass. However, I chose to continue through the Cross Bracing Protocol and my injury was able to fully recover. Now, I consistently do my PT (physiotherapy) exercises every day to ensure my muscles return to be as strong as my non-injured leg.', name: 'Leisha Manchanda', detail: 'Patient Advisor for Cross Bracing Pediatrics' },
     { initials: 'JT', color: '#2980b9', quote: 'The first two weeks in the brace were tough, but the team around me made all the difference. My follow-up MRI showed clear healing. I avoided surgery and I\'m skiing again.', name: 'James T.', detail: 'Recreational skier, age 35' },
     { initials: 'EK', color: '#27ae60', quote: 'As a physiotherapist myself, I was sceptical at first. But the evidence convinced me to try non-surgical management. My recovery exceeded my expectations.', name: 'Elena K.', detail: 'Physiotherapist & netball player, age 31', videoUrl: 'https://vimeo.com/148751763' },
     { initials: 'DP', color: '#8e44ad', quote: 'I tore my ACL at 42 and assumed my active days were over. The non-surgical protocol gave me a path back. I\'m hiking and cycling pain-free.', name: 'David P.', detail: 'Recreational athlete, age 42' },
@@ -118,6 +118,9 @@ export default function Stories() {
                                     <div className="story-author">
                                         <strong>{s.name}</strong>
                                         <span>{s.detail}</span>
+                                        {s.email && (
+                                            <a href={`mailto:${s.email}`} className="story-email">{s.email}</a>
+                                        )}
                                         {s.videoUrl && (
                                             <a
                                                 href={s.videoUrl}
